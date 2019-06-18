@@ -36,7 +36,7 @@ Import the `cfgsaver` module to save/read configuration values in your source fi
 	def get_config():
 		# gets configuration data from ~/.config/<your_package>/cfg.json 
 		# unless cfgpath parameter is overridden:
-		config = cfgsaver.get("<your_package>") #returns empty dict if config file doesn't exist
+		config = cfgsaver.get("<your_package>") #returns None if config file doesn't exist
 		
 
 
