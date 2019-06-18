@@ -27,7 +27,10 @@ Import the `cfgsaver` module to save/read configuration values in your source fi
 	def save_config():
 		# saves configuration data to ~/.config/<your_package>/cfg.json
 		# unless cfgpath parameter is overridden:
-		config = {'name': 'Prahlad', 'language': 'Python', 'framework': 'Flask'}
+		config = {'name': 'Prahlad', 
+		'language': 'Python', 
+		'framework': 'Flask'
+		}
 		cfgsaver.save('<your_package>', config)
 	
 	def get_config():
