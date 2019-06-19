@@ -22,58 +22,64 @@ Python library to save and fetch configuration data in a standard/conventional p
 
 Import the `cfgsaver` module to save/read configuration values in your source files:
 
-	from cfgsaver import cfgsaver
+```python
+from cfgsaver import cfgsaver
 
-	def save_config():
-		# saves configuration data to ~/.config/<your_package>/cfg.json
-		# unless cfgpath parameter is overridden:
-		config = {'name': 'Prahlad', 
-		'language': 'Python', 
-		'framework': 'Flask'
-		}
-		cfgsaver.save('<your_package>', config)
-	
-	def get_config():
-		# gets configuration data from ~/.config/<your_package>/cfg.json 
-		# unless cfgpath parameter is overridden:
-		config = cfgsaver.get("<your_package>") #returns None if config file doesn't exist
-		
+def save_config():
+	# saves configuration data to ~/.config/<your_package>/cfg.json
+	# unless cfgpath parameter is overridden:
+	config = {'name': 'Prahlad', 
+	'language': 'Python', 
+	'framework': 'Flask'
+	}
+	cfgsaver.save('<your_package>', config)
+
+def get_config():
+	# gets configuration data from ~/.config/<your_package>/cfg.json 
+	# unless cfgpath parameter is overridden:
+	config = cfgsaver.get("<your_package>") #returns None if config file doesn't exist
+```
 
 
 While Packaging, ensure to include the path to your cfg.json in `MANIFEST.in` as follows (you'll have to copy this file from ~/.config/<your_package> to your source directory for packaging purpose):
 
-	include <your_package>/cfg.json
+```bash
+include <your_package>/cfg.json
+```python
 		
 Override the PostInstall class in your setup.py like this in order to save your config file to the user's machine after installation:
 
-	from setuptools import setup, find_packages
-	from setuptools.command.install import install
-	import shutil
-	
-	class PostInstallCommand(install):
-		"""Post-installation for installation mode."""
-		def run(self):
-			install.run(self)
-			fpath = os.path.join(self.install_lib, your_package)
-			fpath = os.path.join(fpath, "cfg.json")
-			tpath = os.path.join(os.path.expanduser("~"), ".config/<your_package>/cfg.json")
-			if not os.path.isdir(tpath):
-				os.makedirs(tpath)
-			shutil.move(fpath, tpath)
-			
-	## setup function:
-	
-	setup(
-	name = "your_package",
-	packages=find_packages(),
-	..
-	..
-	..
-	cmdclass={
-		'install': PostInstallCommand,
-	},
-	)
+```python
+from setuptools import setup, find_packages
+from setuptools.command.install import install
+import shutil
 
+class PostInstallCommand(install):
+	"""Post-installation for installation mode."""
+	def run(self):
+		install.run(self)
+		fpath = os.path.join(self.install_lib, your_package)
+		fpath = os.path.join(fpath, "cfg.json")
+		tpath = os.path.join(os.path.expanduser("~"), ".config/<your_package>/cfg.json")
+		if not os.path.isdir(tpath):
+			os.makedirs(tpath)
+		shutil.move(fpath, tpath)
+```
+		
+## setup function:
+	
+```python
+setup(
+name = "your_package",
+packages=find_packages(),
+..
+..
+..
+cmdclass={
+	'install': PostInstallCommand,
+},
+)
+```
 	
 # Attribution
 
