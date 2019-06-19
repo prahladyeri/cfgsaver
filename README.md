@@ -16,8 +16,10 @@ Python library to save and fetch configuration data in a standard/conventional p
 
 # Installation
 
-	pip install cfgsaver
-	
+```bash
+pip install cfgsaver
+```
+
 # Usage
 
 Import the `cfgsaver` module to save/read configuration values in your source files:
