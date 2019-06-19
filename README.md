@@ -66,11 +66,7 @@ class PostInstallCommand(install):
 		if not os.path.isdir(tpath):
 			os.makedirs(tpath)
 		shutil.move(fpath, tpath)
-```
-		
-## Setup.py
-	
-```python
+
 setup(
 name = "your_package",
 packages=find_packages(),
