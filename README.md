@@ -67,7 +67,7 @@ class PostInstallCommand(install):
 			os.makedirs(tpath)
 		shutil.move(fpath, tpath)
 
-setup(
+s = setup(
 name = "your_package",
 packages=find_packages(),
 ..
