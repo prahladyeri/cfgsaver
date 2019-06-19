@@ -23,7 +23,7 @@ s = setup(
 	long_description=read("README.md"),
 	long_description_content_type='text/markdown',
 	url='https://github.com/prahladyeri/%s' % app_name,
-	packages=find_packages(),
+	packages=[pkg_name],
 	include_package_data=True,
 	install_requires=[],
 	python_requires = ">= 3.4",
