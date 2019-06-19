@@ -45,7 +45,7 @@ While Packaging, ensure to include the path to your cfg.json in `MANIFEST.in` as
 
 ```bash
 include <your_package>/cfg.json
-```python
+```
 		
 Override the PostInstall class in your setup.py like this in order to save your config file to the user's machine after installation:
 
