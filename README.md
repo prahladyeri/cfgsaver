@@ -68,14 +68,14 @@ class PostInstallCommand(install):
 		shutil.move(fpath, tpath)
 
 s = setup(
-name = "your_package",
-packages=find_packages(),
-..
-..
-..
-cmdclass={
-	'install': PostInstallCommand,
-},
+	name = "your_package",
+	packages=find_packages(),
+	..
+	..
+	..
+	cmdclass={
+		'install': PostInstallCommand,
+	},
 )
 ```
 	
