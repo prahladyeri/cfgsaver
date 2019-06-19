@@ -68,7 +68,7 @@ class PostInstallCommand(install):
 		shutil.move(fpath, tpath)
 ```
 		
-## setup function:
+## Setup.py:
 	
 ```python
 setup(
