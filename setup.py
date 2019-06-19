@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 from setuptools.command.install import install
 #from subprocess import check_call
 #from pkg_resources import Requirement, resource_filename
-from distutils.dir_util import copy_tree
+#from distutils.dir_util import copy_tree
 #import shutil
 
 app_name = "cfgsaver"
