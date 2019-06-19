@@ -40,11 +40,9 @@ Import the `cfgsaver` module to save/read configuration values in your source fi
 		
 
 
-While Packaging, ensure to include the full path to your ~/.config/<your_package> in `MANIFEST.in` as follows (depending on your OS):
+While Packaging, ensure to include the path to your cfg.json in `MANIFEST.in` as follows (you'll have to copy this file from ~/.config/<your_package> to your source directory for packaging purpose):
 
-	include /home/<username>/.config/<your_package>/cfg.json #linux
-	
-	include /c/users/<username>/.config/<your_package>/cfg.json #Windows
+	include <your_package>/cfg.json
 		
 Override the PostInstall class in your setup.py like this in order to save your config file to the user's machine after installation:
 

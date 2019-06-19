@@ -56,11 +56,11 @@ Prompt user for configuration keys and save resulting values in the configuratio
 """
 def get_from_cmd(pkg_name, keys):
 	print("Configuration Saver version %s\n" % cfgsaver.__version__)
-	dd = {}
+	obj = {}
 	for key in keys:
 		try: 
-			dd[key] = input("Enter %s: " % key)
+			obj[key] = input("Enter %s: " % key)
 		except KeyboardInterrupt as ex:
 			return None
-	save(pkg_name, dd)
-	return dd
+	save(pkg_name, obj)
+	return obj
