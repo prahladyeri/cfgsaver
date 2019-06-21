@@ -26,7 +26,7 @@ def get(pkg_name , cfgpath=None):
 		return None
 	ss = open(cfgpath).read()
 	return json.loads(ss)
-	
+
 
 """
 Save Configuration Data
@@ -55,7 +55,8 @@ Prompt user for configuration keys and save resulting values in the configuratio
 :returns: True
 """
 def get_from_cmd(pkg_name, keys):
-	print("Configuration Saver version %s\n" % cfgsaver.__version__)
+	#print("Configuration Saver version %s\n" % cfgsaver.__version__)
+	print("\n**ENTER CONFIGURATION**\n")
 	obj = {}
 	for key in keys:
 		try: 
