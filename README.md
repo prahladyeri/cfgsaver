@@ -43,7 +43,9 @@ def get_config():
 ```
 
 
-While Packaging, ensure to include the path to your cfg.json in `MANIFEST.in` as follows (you'll have to copy this file from ~/.config/<your_package> to your source directory for packaging purpose):
+In case you want to ship some default configuration data packaged with your app, then read the below instructions carefully:
+
+Ensure to include the path to your cfg.json in `MANIFEST.in` as follows (you'll have to copy this file from ~/.config/<your_package> to your source directory for packaging purpose):
 
 ```bash
 include <your_package>/cfg.json
