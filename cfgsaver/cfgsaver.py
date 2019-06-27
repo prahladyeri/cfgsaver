@@ -60,10 +60,11 @@ def get_from_cmd(pkg_name, keys, optional_keys=[]):
 	obj = {}
 	for key in keys:
 		try: 
-			opt = "(optional)" if key in optional_keys else "":
+			opt = "(optional)" if key in optional_keys else ""
 			msg = "Enter %s%s: " % (key, opt)
 			obj[key] = input(msg)
 		except KeyboardInterrupt as ex:
 			return None
+	print("")
 	save(pkg_name, obj)
 	return obj
