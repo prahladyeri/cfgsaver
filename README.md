@@ -10,7 +10,7 @@
 [![follow](https://img.shields.io/twitter/follow/prahladyeri.svg?style=social)](https://twitter.com/prahladyeri)
 # cfgsaver
 
-![project logo](https://raw.githubusercontent.com/prahladyeri/cfgsaver/master/cfgsaver.png)
+![project logo](https://raw.githubusercontent.com/prahladyeri/cfgsaver/master/logo.png)
 
 Python library to save and fetch configuration data in a standard/conventional path and format.
 
