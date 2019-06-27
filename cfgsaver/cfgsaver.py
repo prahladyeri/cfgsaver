@@ -42,7 +42,7 @@ def save(pkg_name, cfgobject, cfgpath=None):
 	if not os.path.isdir(cfgpath):
 		os.makedirs(cfgpath)
 	cfgpath = os.path.join(cfgpath,  "cfg.json")
-	ss = json.dumps(cfgobject)
+	ss = json.dumps(cfgobject, indent=4) #sort_keys=True
 	open(cfgpath, 'w').write(ss)
 	return True
 
