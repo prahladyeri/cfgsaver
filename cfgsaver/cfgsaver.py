@@ -51,16 +51,18 @@ Prompt user for configuration keys and save resulting values in the configuratio
 
 :param pkg_name: Name of the package
 :param keys: List of keys
-:param cfgpath, optional: Path to json file
+:param optional_keys, optional: List of optional keys
 :returns: True
 """
-def get_from_cmd(pkg_name, keys):
+def get_from_cmd(pkg_name, keys, optional_keys=[]):
 	#print("Configuration Saver version %s\n" % cfgsaver.__version__)
 	print("\n**ENTER CONFIGURATION**\n")
 	obj = {}
 	for key in keys:
 		try: 
-			obj[key] = input("Enter %s: " % key)
+			opt = "(optional)" if key in optional_keys else "":
+			msg = "Enter %s%s: " % (key, opt)
+			obj[key] = input(msg)
 		except KeyboardInterrupt as ex:
 			return None
 	save(pkg_name, obj)
