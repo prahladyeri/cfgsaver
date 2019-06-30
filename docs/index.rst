@@ -7,8 +7,10 @@ Introduction
 
 `cfgsaver <https://github.com/prahladyeri/cfgsaver>`_ is a python library to save and fetch configuration data in a standard or conventional path and format. By default, it saves the configuration data in `JSON` format to the ``~/.config/<pkg_name>/cfg.json`` where `~` represents the user's home directory.
 
-Installation:::
+Installation
 ===========================
+
+.. code-block:: bash
 
 	pip install cfgsaver
 
