@@ -37,7 +37,7 @@ Import the `cfgsaver` module to save/read configuration values in your source fi
 		# unless cfgpath parameter is overridden:
 		config = cfgsaver.get("<your_package>") #returns None if config file doesn't exist
 
-This will save the configuration data to `~/.config/<your_package>/` on both linux and windows.
+This will save the configuration data to `~/.config/<your_package>/cfg.json` on both linux and windows.
 
 In case you want to ship some default configuration data packaged with your app, then read the below instructions carefully:
 

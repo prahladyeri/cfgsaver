@@ -40,7 +40,7 @@ def get_config():
 	config = cfgsaver.get("<your_package>") #returns None if config file doesn't exist
 ```
 
-This will save the configuration data to `~/.config/<your_package>/` on both linux and windows.
+This will save the configuration data to `~/.config/<your_package>/cfg.json` on both linux and windows.
 
 For information on shipping default configuration data packaged with your app using `setup.py`, read [detailed docs](https://cfgsaver.readthedocs.io/en/latest/).
 
