@@ -17,7 +17,7 @@ Usage
 
 Import the `cfgsaver` module to save/read configuration values in your source files:
 
-..code-block:: python
+.. code-block:: python
 
 	from cfgsaver import cfgsaver
 
