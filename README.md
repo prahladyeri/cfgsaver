@@ -42,11 +42,11 @@ def get_config():
 
 This will save the configuration data to `~/.config/<your_package>/` on both linux and windows.
 
-For information on shipping default configuration data packaged with your app using `setup.py`, read [detailed docs](https://distroverify.readthedocs.io/en/latest/).
+For information on shipping default configuration data packaged with your app using `setup.py`, read [detailed docs](https://cfgsaver.readthedocs.io/en/latest/).
 
 # Documentation
 
-Detailed docs are available at <https://distroverify.readthedocs.io/en/latest/>.
+Detailed docs are available at <https://cfgsaver.readthedocs.io/en/latest/>.
 	
 # Attribution
 
