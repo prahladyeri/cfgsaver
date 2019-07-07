@@ -50,8 +50,6 @@ def prompt_user():
 	config = cfgsaver.get_from_cmd("<your_package>", config.keys())
 ```
 
-This will save the configuration data to `~/.config/<your_package>/cfg.json` on both linux and windows.
-
 For information on shipping default configuration data packaged with your app using `setup.py`, read [detailed docs](https://cfgsaver.readthedocs.io/en/latest/).
 
 # Documentation
