@@ -28,7 +28,8 @@ from cfgsaver import cfgsaver
 def save_config():
 	# saves configuration data to ~/.config/<your_package>/cfg.json
 	# unless cfgpath parameter is overridden:
-	config = {'name': 'Prahlad', 
+	config = {
+	'name': 'Prahlad', 
 	'language': 'Python', 
 	'framework': 'Flask'
 	}
@@ -38,6 +39,15 @@ def get_config():
 	# gets configuration data from ~/.config/<your_package>/cfg.json 
 	# unless cfgpath parameter is overridden:
 	config = cfgsaver.get("<your_package>") #returns None if config file doesn't exist
+	
+def prompt_user():
+	# prompts user for config keys and saves resulting values as per save_config()
+	config = {
+	'name': '', 
+	'language': '', 
+	'framework': ''
+	}
+	config = cfgsaver.get_from_cmd("<your_package>", config.keys())
 ```
 
 This will save the configuration data to `~/.config/<your_package>/cfg.json` on both linux and windows.
